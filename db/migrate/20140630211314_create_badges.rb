@@ -4,7 +4,7 @@ class CreateBadges < ActiveRecord::Migration
     	t.string :icon
     	t.string :name
 
-    	#A badge has_one course
+    	#Foreign Key: Each badge has_one course
     	t.integer :course_id
 
     	t.timestamps
