@@ -10,7 +10,7 @@
 	<% @subjects.each do |subject| %>
 	<li>
 		<% link_to 'Course', courses_path %>
-		<a href="/courses"><%= subject.name %></a>
+		<a href="/courses/?course.subject_id==subject.id"><%= subject.name %></a>
 	</li>
 	<% end %>
 </ul>
