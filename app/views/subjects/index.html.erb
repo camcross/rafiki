@@ -1,0 +1,15 @@
+<h1>SUBJECTS</h1>
+
+<!-- Create all Subjects -->
+<!-- Create 2 categories in the rails console- - "Math" has id = 1, "Science" has id = 2 -->
+<% Subject.create(:name => "Language") %>
+<% Subject.create(:name => "Technology") %>
+
+
+<ul>
+	<% @subjects.each do |subject| %>
+	<li>
+		<%= subject.name %>
+	</li>
+	<% end %>
+</ul>
