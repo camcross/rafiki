@@ -7,6 +7,10 @@ class CoursesController < ApplicationController
 		@course = Course.new
 	end
 
+	# def show
+	# 	@course = Course.show(params[:id])
+	# end
+
 	def create
 		@course = Course.new(course_params)
 		@course.save

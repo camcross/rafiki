@@ -11,8 +11,7 @@
 <ul>
 	<% @subjects.each do |subject| %>
 	<li>
-		<% link_to 'Course', courses_path %>
-		<a href="/courses/?course.subject_id==subject.id"><%= subject.name %></a>
+		<%= link_to subject.name, '/courses/' %>
 	</li>
 	<% end %>
 </ul>
