@@ -1,19 +1,21 @@
 class CoursesController < ApplicationController
 	def index
-		@subjects = Subject.all
+		@courses = Course.all
 	end	
 
 	def new
-		@subject = Subject.new
+		@course = Course.new
 	end
 
 	def create
-		@subject = Subject.new(subject_params)
-		@subject.save
+		@course = Course.new(course_params)
+		@course.save
 		redirect_to :action => :index
 	end
 	
-	def subject_params
-		params.require(:subject).permit(:name)
+	def course_params
+		params.require(:course).permit(:name, :subject_id)
 	end	
+
+
 end
