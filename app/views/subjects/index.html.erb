@@ -9,7 +9,8 @@
 <ul>
 	<% @subjects.each do |subject| %>
 	<li>
-		<%= subject.name  %>
+		<% link_to 'Course', courses_path %>
+		<a href="/courses"><%= subject.name %></a>
 	</li>
 	<% end %>
 </ul>
