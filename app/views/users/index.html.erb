@@ -1,3 +1,23 @@
 <h1>Welcome to your personal page, <%= "#{current_user.name}"%>!</h1>
 
-<%= link_to 'Sign out', destroy_user_session_path , :method => :delete %>
+<!-- Generate Profile Picture and Caption it with User Name -->
+<div class="profile_pic">PROFILE PICTURE
+	<br/>
+<%=link_to image_tag("silhouette.jpg")%></div>
+<br/>
+<%= "#{current_user.name}"%>
+<br/>
+
+<div class="Learn"><%= link_to 'LEARN', subjects_path %></div>
+<br/>
+
+<div class="Teach">TEACH</div>
+<br/>
+
+<div class="Connect">CONNECT</div>
+<br/>
+
+<!-- Give the user the option to sign out -->
+<footer>
+	<%= link_to 'Sign out', destroy_user_session_path , :method => :delete %>
+</footer>

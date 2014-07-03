@@ -1,21 +1,19 @@
+<h1>LEARN</h1>
+
+<!-- List subject names in bold; related categories follow accordingly -->
+<% @subjects.each do |subject|%>
+	<strong><%= subject.name %></strong>
+	<br/>
+	<% courses = Course.all %>
+	<% courses.each do |course| %>
+		<% if course.subject_id == subject.id %>
+			<%= course.name %>
+			<br/>
+		<% end %>	
+	<% end %>	
+	<br/>
+<% end %>	
 
 
-
-	<!-- Create all Subjects -->
-	<!-- Create 2 categories in the rails console- - "Math" has id = 1, "Science" has id = 2 -->
-	<% Subject.delete_all %>
-	<% Subject.create(:name => "Math") %>
-	<% Subject.create(:name => "Science") %>
-	<% Subject.create(:name => "Language") %>
-	<% Subject.create(:name => "Technology") %>
-
-<div class = "row"> 
-	<% @subjects.each do |subject| %>
-	<div class="col-md-6">
-		<%= link_to subject.name, '/courses/select' %>
-	</div>
-	<% end %>
-</div> 
- 
 
 
