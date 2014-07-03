@@ -16,8 +16,7 @@
 
 /*@import "bootstrap-sprockets";*/
 /*@import "bootstrap";*/
-@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
-@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans|Lobster|Shadows+Into+Light|Open+Sans+Condensed:300|Indie+Flower|Pacifico);
 
 .links {
 	text-align: right;
@@ -35,10 +34,6 @@
     font-family: "Shadows Into Light", sans-serif; 
     font-size: 30px;
 /*	visibility: hidden;*/
-}
-
-.links {
-	color: white;
 }
 
 /*header:hover {
