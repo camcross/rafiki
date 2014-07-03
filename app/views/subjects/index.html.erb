@@ -19,8 +19,7 @@
 <div class = "row"> 
 	<% @subjects.each do |subject| %>
 	<div class="col-md-6">
-		<% link_to 'Course', courses_path %>
-		<a href="/courses" class="Subject_Titles"><%= subject.name %><br></a>
+		<%= link_to subject.name, '/courses/' %>
 	</div>
 	<% end %>
 </div> 

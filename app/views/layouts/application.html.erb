@@ -8,7 +8,17 @@
 </head>
 <body>
 <div class = 'container'>
-<%= yield %>
+	<p class="notice"><%= notice %></a>
+	<p class="alert"><%= alert %></a>
+	<%= yield %>
 </div>
+	<div class="footer">
+		<% if user_signed_in? %>
+			<%= link_to 'Sign Out', destroy_user_session_path, :method => :delete%>
+		<% else %>
+			<%= link_to 'Sign In', new_user_session_path %>
+		<% end %>	
+
+	</div>
 </body>
 </html>
