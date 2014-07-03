@@ -1,19 +1,29 @@
-<h1>SUBJECTS</h1>
+<header>
+	<div>
+		(Logo)
+		Subject
+		links
+	</div>
+</header>
 
-<!-- Create all Subjects -->
-<!-- Create 2 categories in the rails console- - "Math" has id = 1, "Science" has id = 2 -->
-<% Subject.delete_all %>
-<% Subject.create(:name => "Math") %>
-<% Subject.create(:name => "Science") %>
-<% Subject.create(:name => "Language") %>
-<% Subject.create(:name => "Technology") %>
 
-<ul>
+
+	<!-- Create all Subjects -->
+	<!-- Create 2 categories in the rails console- - "Math" has id = 1, "Science" has id = 2 -->
+	<% Subject.delete_all %>
+	<% Subject.create(:name => "Math") %>
+	<% Subject.create(:name => "Science") %>
+	<% Subject.create(:name => "Language") %>
+	<% Subject.create(:name => "Technology") %>
+
+<div class = "row"> 
 	<% @subjects.each do |subject| %>
-	<li>
+	<div class="col-md-6">
 		<% link_to 'Course', courses_path %>
-		<a href="/courses"><%= subject.name %></a>
-	</li>
+		<a href="/courses" class="Subject_Titles"><%= subject.name %><br></a>
+	</div>
 	<% end %>
-</ul>
+</div> 
+ 
+
 

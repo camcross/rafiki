@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+
+
+header {
+	background-color: #3D6868;
+	position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+/*	visibility: hidden;*/
+}
+
+/*header:hover {
+	background-color: #3D6868;
+	visibility: visible;
+}*/
