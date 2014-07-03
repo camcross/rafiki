@@ -23,5 +23,9 @@ class CoursesController < ApplicationController
 		params.require(:course).permit(:name, :subject_id)
 	end	
 
+	def select
+		Course.find(:all, :conditions => ["subject_id" == 1])
+	end
+
 
 end

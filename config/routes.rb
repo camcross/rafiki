@@ -6,10 +6,11 @@ Rails.application.routes.draw do
 
   get 'home' => 'home#index'
 
+  get 'courses' => 'courses#select'
 
   resources :subjects, :only => [:index, :new, :create]
 
-  resources :courses, :only => [:index, :new, :create]
+  resources :courses, :only => [:index, :new, :create,]
 
   resources :users, :only => [:index, :new, :create]
   # The priority is based upon order of creation: first created -> highest priority.
