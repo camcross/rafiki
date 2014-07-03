@@ -1,6 +1,6 @@
-#cloud {
+.contain_cloud {
 	height: 100%;
-	background: url(Flower.jpg) no-repeat center center fixed;
+	background: url(Toucan.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -13,27 +13,23 @@
 	z-index: -1;
 }
 
-.main {
+.main_new {
 	position: absolute;
 	top: 20%;
-	left: 15%;
+	left: 20%;
 	padding: 25px;
 	text-align: center;
-	/*background-color: #A48F7A;
-	opacity: 0.8;*/
 	h2 {
 		font-family: 'lobster', sans-serif;
-		font-size: 40px;
+		font-size: 35px;
 		text-align: center;
-		color: #191975;
+		color: #FFBD02;
 	}
 	.form_text {
-		font-size: 25px;
+		font-size: 20px;
 		font-family: 'Indie Flower', sans-serif;
 		-webkit-border-radius: 5px;
 		border-radius: 5px;
-		color: #191975;
+		color: #FFBD02;
 	}
 }
-
-
