@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Course.delete_all
+Course.create(:name => "Geometry", :subject_id => 1) 
+Course.create(:name => "Algebra", :subject_id => 1) 
+Course.create(:name => "Biology", :subject_id => 2)
+Course.create(:name => "Chemistry", :subject_id => 2)
