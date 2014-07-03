@@ -1,3 +1,10 @@
 <h1>Welcome to Canopy Connect!</h1>
 
+<% if user_signed_in? %>
+	Welcome, <%= current_user.name %>!
+<% end %>
 
+<br/>
+<br/>	
+
+<%= link_to 'Subjects', subjects_path %>

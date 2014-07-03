@@ -1,12 +1,17 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+  
+  root to: 'home#index'
+
   get 'home' => 'home#index'
 
-  get 'subjects' => 'subjects#index'
 
-  get 'courses' => 'courses#index'
+  resources :subjects, :only => [:index, :new, :create]
 
-  get 'courses/:id' => 'courses#show'
+  resources :courses, :only => [:index, :new, :create]
+
+  resources :users, :only => [:index, :new, :create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
