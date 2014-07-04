@@ -28,12 +28,30 @@
 		color: #191975;
 	}
 	.form_text {
-		font-size: 25px;
-		font-family: 'Indie Flower', sans-serif;
+		font-size: 22px;
+		font-family: 'roboto', sans-serif;
 		-webkit-border-radius: 5px;
 		border-radius: 5px;
 		color: #191975;
 	}
+}
+.submit {
+	background-color: #191975;
+	margin-top: 7px;
+	padding: 7px;
+	color: white;
+	font-family: 'roboto', sans-serif;
+	font-size: 15px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin-bottom: 40px;
+}
+.input_field {
+	background-color: #191975;
+	color: white;
+	font-size: 15px;
+	border: none;
+
 }
 
 

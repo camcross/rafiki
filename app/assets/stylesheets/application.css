@@ -40,3 +40,27 @@
 	background-color: #3D6868;
 	visibility: visible;
 }*/
+
+.render1 {
+	padding-top: 40px;
+	margin-top: 40px;
+	margin-right: 20px; 
+	font-size: 25px;
+	color: white;
+	text-align: left;
+	width: 150px;
+}
+
+.render2 {
+	font-size: 25px;
+	margin-left: 20px;
+	color: white;
+	text-align: right;
+}
+
+.render3 {
+	font-size: 25px;
+	margin-left: 20px;
+	color: white;
+	text-align: right;	
+}
