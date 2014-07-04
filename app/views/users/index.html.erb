@@ -21,3 +21,18 @@
 <footer>
 	<%= link_to 'Sign out', destroy_user_session_path , :method => :delete %>
 </footer>
+<br/>
+<br/>
+
+<h2>BADGES</h2>
+
+<% badges = Badge.all %>
+<% badges.each do |badge| %>
+<%= badge.id %>
+<strong><%= badge.name %></strong>
+<br/>
+<%= image_tag("#{badge.icon}") %>
+<br/>
+<br/>
+<br/>
+<% end %>

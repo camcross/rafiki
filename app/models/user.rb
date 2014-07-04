@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -10,5 +11,4 @@ class User < ActiveRecord::Base
 	#for users who will enroll in classes
 	has_many :enrollments
 	has_many :enrolled_modules, through: :enrollments, class_name: "Module"
-	
 end

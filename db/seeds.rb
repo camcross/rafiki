@@ -19,3 +19,14 @@ Course.create(:name => "Biology", :subject_id => 2)
 Course.create(:name => "Chemistry", :subject_id => 2)
 Course.create(:name => "Geology", :subject_id => 2)
 Course.create(:name => "Scientific Method", :subject_id => 2)
+
+courses = Course.all
+
+Badge.create(:name => "Geometry Badge", :course_id => 1, :icon => "geometry_badge.jpg")
+Badge.create(:name => "Algebra Badge", :course_id => 2, :icon => "algebra_badge.jpg")
+Badge.create(:name => "Fractions Badge", :course_id => 3, :icon => "fractions_badge.jpg")
+Badge.create(:name => "Trigonometry Badge", :course_id => 4, :icon => "trigonometry_badge.jpg")
+Badge.create(:name => "Biology Badge", :course_id => 5, :icon => "biology_badge.jpg")
+Badge.create(:name => "Chemistry Badge", :course_id => 6, :icon => "chemistry_badge.jpg")
+Badge.create(:name => "Geology Badge", :course_id => 7, :icon => "geology_badge.jpg")
+Badge.create(:name => "Scientific Notation Badge", :course_id => 8, :icon => "scientific_notation_badge.jpg")

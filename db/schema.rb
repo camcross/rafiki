@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140703071723) do
+ActiveRecord::Schema.define(version: 20140704091244) do
 
   create_table "achievements", force: true do |t|
     t.string   "name"
@@ -104,6 +104,10 @@ ActiveRecord::Schema.define(version: 20140703071723) do
     t.string   "last_sign_in_ip"
     t.string   "name"
     t.string   "profile_pic"
+    t.string   "pro_pic_file_name"
+    t.string   "pro_pic_content_type"
+    t.integer  "pro_pic_file_size"
+    t.datetime "pro_pic_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
