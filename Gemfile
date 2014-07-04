@@ -9,7 +9,6 @@ gem 'paperclip'
 
 # :development do
 	gem 'quiet_assets'
-	gem 'puma'
 # end	
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
