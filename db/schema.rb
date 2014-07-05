@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140704091244) do
+ActiveRecord::Schema.define(version: 20140705150435) do
 
   create_table "achievements", force: true do |t|
     t.string   "name"
@@ -53,6 +53,9 @@ ActiveRecord::Schema.define(version: 20140704091244) do
     t.datetime "updated_at"
   end
 
+  create_table "lessons", force: true do |t|
+  end
+
   create_table "modules", force: true do |t|
     t.string   "name"
     t.integer  "points"
@@ -80,6 +83,17 @@ ActiveRecord::Schema.define(version: 20140704091244) do
   create_table "subjects", force: true do |t|
     t.string   "name"
     t.string   "icon"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tasks", force: true do |t|
+    t.string   "name"
+    t.integer  "points"
+    t.text     "description"
+    t.integer  "course_id"
+    t.integer  "author_id"
+    t.integer  "enrollee_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

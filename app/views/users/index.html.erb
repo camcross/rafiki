@@ -17,14 +17,21 @@
 <div class="Connect">CONNECT</div>
 <br/>
 
+<a href="#badges">BADGES</a>
+
 <!-- Give the user the option to sign out -->
 <footer>
+	<br/>
 	<%= link_to 'Sign out', destroy_user_session_path , :method => :delete %>
 </footer>
 <br/>
 <br/>
 
-<h2>BADGES</h2>
+
+<%#NOTE TO LEAH: To target each badge with CSS, try to interpolate a class name into the do-each loop. 
+So try something like this, BEFORE the part that gets the badge id: <div class="#{badge.name}"> ... finish the loop,
+then close the div </div>%>
+<h2 id="badges">BADGES</h2>
 
 <% badges = Badge.all %>
 <% badges.each do |badge| %>

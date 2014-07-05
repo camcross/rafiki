@@ -7,7 +7,7 @@
 	<% courses = Course.all %>
 	<% courses.each do |course| %>
 		<% if course.subject_id == subject.id %>
-			<%= course.name %>
+			<%= link_to course.name, tasks_path %>
 			<br/>
 		<% end %>	
 	<% end %>	
@@ -17,7 +17,3 @@
 <% subjects = Subject.all %>
 <% math = subjects.find(1) %>
 <%= math.id %>
-
-
-
-
