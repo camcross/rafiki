@@ -10,6 +10,18 @@
 		@task = Task.new
 	end
 
+	def show
+		@task = Task.find(params[:id])
+
+		@enrollment = Enrollment.new
+		@enrollment.status = "In Progress"
+		@enrollment.enrollee_id = current_user.id
+		@enrollment.task_id = params[:id]
+		@enrollment.save
+		# if @enrollment.save
+		# 	flash[:something] = "Enrollment successful!"
+	end
+
 	def create
 		@task = Task.new(task_params)
 		@task.save

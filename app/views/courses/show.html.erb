@@ -6,4 +6,6 @@
 	<strong>Description: </strong><%= task.description %>
 	<br/>
 	<strong>Reward: </strong><%= task.points %> points
+	<br/>
+	<%= link_to 'ENROLL', "/tasks/#{task.id}" %>
 <% end %>
