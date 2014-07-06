@@ -46,6 +46,7 @@
 	margin-top: 40px;
 	margin-right: 20px; 
 	font-size: 25px;
+	font-family: 'Shadows Into Light', sans-serif;
 	color: white;
 	text-align: left;
 	width: 150px;
@@ -54,6 +55,7 @@
 .render2 {
 	font-size: 25px;
 	margin-left: 20px;
+	font-family: 'Shadows Into Light', sans-serif;
 	color: white;
 	text-align: right;
 }
@@ -61,6 +63,7 @@
 .render3 {
 	font-size: 25px;
 	margin-left: 20px;
+	font-family: 'Shadows Into Light', sans-serif;
 	color: white;
 	text-align: right;	
 }

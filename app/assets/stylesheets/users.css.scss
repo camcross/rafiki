@@ -1,0 +1,44 @@
+.Links {
+	color: #004443;
+	font-size: 60px;
+	text-align: center;
+	font-family: 'Indie Flower', sans-serif;
+}
+
+.profile_pic {
+	color: #002E34;
+	text-align: center;
+	vertical-align: middle;
+	font-family: 'Indie Flower', sans-serif;
+	h1 {
+		font-family: 'lobster', sans-serif;
+		font-size: 45px;
+	}
+	div {
+		font-size: 40px;
+		padding: 20px;
+		font-weight: bold;
+	}
+}
+#container {
+	height: 82%;
+	background: url('Leaf.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	z-index: -1;
+}
+body {
+	background-color: #80E547;
+}
+.badge {
+	background-color: #80E547;	
+	margin: 20px;
+	padding: 20px;
+}

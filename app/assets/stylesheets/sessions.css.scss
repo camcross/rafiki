@@ -1,6 +1,6 @@
 #cloud {
 	height: 100%;
-	background: url(Flower.jpg) no-repeat center center fixed;
+	background: url('Rainforest.jpg') no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -11,47 +11,42 @@
 	right: 0;
 	overflow: hidden;
 	z-index: -1;
+
 }
 
 .main {
 	position: absolute;
-	top: 20%;
-	left: 15%;
+	top: 18%;
+	left: 35%;
 	padding: 25px;
 	text-align: center;
-	/*background-color: #A48F7A;
-	opacity: 0.8;*/
 	h2 {
-		font-family: 'lobster', sans-serif;
-		font-size: 40px;
+		color: white;
+		font-family: 'lobster', helvetica, sans-serif;
+		font-size: 45px;
 		text-align: center;
-		color: #191975;
+		
 	}
 	.form_text {
-		font-size: 22px;
-		font-family: 'roboto', sans-serif;
+		font-size: 27px;
+		font-family: 'Indie Flower', sans-serif;
 		-webkit-border-radius: 5px;
 		border-radius: 5px;
-		color: #191975;
+		color: white;
 	}
 }
 .submit {
-	background-color: #191975;
 	margin-top: 7px;
-	padding: 7px;
-	color: white;
+	padding: 4px;
 	font-family: 'roboto', sans-serif;
 	font-size: 15px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
 	margin-bottom: 40px;
 }
 .input_field {
-	background-color: #191975;
-	color: white;
 	font-size: 15px;
 	border: none;
-
 }
 
 
