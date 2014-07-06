@@ -1,4 +1,5 @@
 <!-- Generate Profile Picture and Caption it with User Name -->
+<<<<<<< HEAD
 <div id="container"></div>
 
 <h1>Welcome, <%= "#{current_user.name.capitalize}"%>!</h1>
@@ -11,7 +12,7 @@
 		<div><%= "#{current_user.name.capitalize}"%></div>
 	</div>
 
-	<a href="#progress" class="col-md-4 Links">Progress</a>
+	<div class="col-md-4 Links"><%= link_to 'ENROLLMENTS', enrollments_path %></div>
 
 </div>
 
@@ -39,3 +40,4 @@
 	</div>
 	<% end %>
 </div>
+

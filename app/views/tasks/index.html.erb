@@ -1,1 +1,15 @@
 <strong><h1>Tasks coming soon!</h1></strong>
+
+<% @tasks.each do |task| %>
+	<h3><%= task.id %>.
+	<%= task.name %></h3>
+	<br/>
+	<strong>Description: </strong><%= task.description %>
+	<br/>
+    </br>
+	<strong>Reward: </strong><%= task.points %> points
+	<br/>
+	<br/>
+	<%= link_to 'ENROLL', enrollments_path, method: :post %>
+<% end %>
+<br/>

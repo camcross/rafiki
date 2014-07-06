@@ -4,7 +4,7 @@ class CreateGuides < ActiveRecord::Migration
     	t.string :body
 
     	#Foreign Key: Each Guide belongs_to a Module
-    	t.integer :module_id
+    	t.integer :lesson_id
 
     	t.timestamps
     end

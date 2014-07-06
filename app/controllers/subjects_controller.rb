@@ -9,6 +9,10 @@ class SubjectsController < ApplicationController
 		@subject = Subject.new
 	end
 
+	def show
+		@subject = Subject.find(params[:id])
+	end
+
 	def create
 		@subject = Subject.new(subject_params)
 		@subject.save

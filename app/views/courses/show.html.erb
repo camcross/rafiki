@@ -1,1 +1,9 @@
-<h1>HAY</h1>
+<h1>Tasks For <%= @course.name %></h1>
+
+<% @course.tasks.each do|task| %>
+	<strong>Name: </strong><%= task.name %>
+	<br/>
+	<strong>Description: </strong><%= task.description %>
+	<br/>
+	<strong>Reward: </strong><%= task.points %> points
+<% end %>

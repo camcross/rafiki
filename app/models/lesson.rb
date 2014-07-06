@@ -1,4 +1,4 @@
-class Task < ActiveRecord::Base
+class Lesson < ActiveRecord::Base
 	#for users who upload content
 	belongs_to :user
 	#for enrolled users
@@ -10,5 +10,5 @@ class Task < ActiveRecord::Base
 	has_one :test
 	#for distinguishing between authors and enrollees
 	belongs_to :author, :class_name => "User"
-	has_many :enrollees, :through => :enrollments, :class_name => "User"
+	has_many :enrollees, :through => :Enrollments, :class_name => "User"
 end
