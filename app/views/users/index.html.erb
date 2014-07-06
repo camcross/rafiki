@@ -5,6 +5,7 @@
 	<div>PROFILE PICTURE</div>
 	<div><%=link_to image_tag("silhouette.jpg")%></div>
 	<div><%= "#{current_user.name.capitalize}"%></div>
+	<a href="#badges">BADGES</a>
 </div>
 
 <div class="row">
@@ -15,13 +16,14 @@
 
 
 	<div class="col-md-4 Links">Connect</div>
+
 	
 </div>
 
-
-<h2>BADGES</h2>
 <div class = "row badge">
 	<% badges = Badge.all %>
+
+<h2 id="badges">BADGES</h2>
 
 	<% badges.each do |badge| %>
 	<div class= "col-md-3">
