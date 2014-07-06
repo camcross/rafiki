@@ -2,10 +2,37 @@
 
 <strong><h4>Description: </h4></strong><%= @task.description %>
 
-<strong><h4>Extra Reading and Practice</h4></strong>
+<strong><h4>Read About It</h4></strong>
 
 <% @task.guide.body.split(" ").each do |link|%>
 	<%= link_to link, link %>
 	<br/>
 <% end %>
+
+<strong><h4>Practice</h4></strong>
+
+<% @task.guide.practice.split(" ").each do |link|%>
+	<%= link_to link, link %>
+	<br/>
+<% end %>
+
+<strong><h4><a href="#take_test">Take Test</a></h4></strong>
+
+<div id="take_test">
+<strong><h4>TAKE TEST: </h4></strong>
+<br/>
+<%= @task.test.body %>
+<br/><br/>
+<ol>
+	<% @task.test.questions.each do |question| %>
+	<li><%= question.body %></li>
+	<div class="questions">
+		<% question.options.each do |option| %>
+			<input type="radio" class="questions"><%= option.body %>
+			<br/>
+		<% end %>
+	</div>	
+	<% end %>	
+</ol>
+</div>
 
