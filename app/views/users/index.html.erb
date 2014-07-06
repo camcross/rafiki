@@ -1,11 +1,18 @@
 <!-- Generate Profile Picture and Caption it with User Name -->
 <div id="container"></div>
-<div class="profile_pic">
-	<h1>Welcome, <%= "#{current_user.name.capitalize}"%>!</h1>
-	<div>PROFILE PICTURE</div>
-	<div><%=link_to image_tag("silhouette.jpg")%></div>
-	<div><%= "#{current_user.name.capitalize}"%></div>
-	<a href="#badges">BADGES</a>
+
+<h1>Welcome, <%= "#{current_user.name.capitalize}"%>!</h1>
+
+<div class="row">
+	<a href="#badges" class="col-md-4 Links">Badges</a>
+	
+	<div class="col-md-4">PROFILE PICTURE
+		<div><%=link_to image_tag("silhouette.jpg")%></div>
+		<div><%= "#{current_user.name.capitalize}"%></div>
+	</div>
+
+	<a href="#progress" class="col-md-4 Links">Progress</a>
+
 </div>
 
 <div class="row">
@@ -23,7 +30,7 @@
 <div class = "row badge">
 	<% badges = Badge.all %>
 
-<h2 id="badges">BADGES</h2>
+<h2 id="badges">Badges</h2>
 
 	<% badges.each do |badge| %>
 	<div class= "col-md-3">
