@@ -1,0 +1,9 @@
+<h2>YOUR TASKS</h2>
+
+<% enrollments = Enrollment.all %>
+<% enrollments.each do |e| %>
+	<% if e.enrollee_id == current_user.id %>
+		<strong>Status: </strong><%= e.status %>
+		<%= e.enrollee.name %>
+	<% end %>	
+<% end %>

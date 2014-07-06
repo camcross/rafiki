@@ -8,14 +8,22 @@ Rails.application.routes.draw do
 
   get 'courses' => 'courses#select'
 
-  resources :subjects, :only => [:index, :new, :create]
+  get 'enrollments/welcome' => 'enrollments#welcome'
 
-  resources :courses, :only => [:index, :new, :create]
+
+  resources :subjects, :only => [:index, :new, :create, :show]
+
+  resources :courses, :only => [:index, :new, :create, :show]
 
   resources :users
 
   resources :tasks
 
+  resources :enrollments, :only => [:create, :index]
+
+resources :courses do
+  resources :tasks
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
