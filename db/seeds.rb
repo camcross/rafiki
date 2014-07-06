@@ -36,6 +36,6 @@ Task.create(:name => "Pythagorean Theorem", :points => 10, :course_id => 1, :des
 	By the end of this lesson, you will have mastered the ability to deduce the length of one side of a triangle when the 
 	lengths of the other two are known. This concept is crucial to the later study of trigonometry.")
 
-Guide.create(:task_id => 1, :body => "Here's a list of helpful resources to consult as you learn: 
-	http://www.mathsisfun.com/pythagoras.html
-	http://www.mathwarehouse.com/geometry/triangles/how-to-use-the-pythagorean-theorem.php")
+Guide.create(:task_id => 1, :body => "http://www.mathsisfun.com/pythagoras.html
+	http://www.mathwarehouse.com/geometry/triangles/how-to-use-the-pythagorean-theorem.php 
+	http://www.regentsprep.org/regents/math/algebra/at1/pracpyth.htm")

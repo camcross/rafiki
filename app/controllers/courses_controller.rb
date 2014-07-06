@@ -11,6 +11,14 @@ class CoursesController < ApplicationController
 
 	def show
 		@course = Course.find(params[:id])
+
+		@enrollment = Enrollment.new
+		@enrollment.status = "In Progress"
+		@enrollment.enrollee_id = current_user.id
+		@enrollment.task_id = params[:id]
+		@enrollment.save
+		# if @enrollment.save
+		# 	flash[:something] = "Enrollment successful!"
 	end
 
 	def create
@@ -29,3 +37,9 @@ class CoursesController < ApplicationController
 
 
 end
+
+# Subject has and belongs to many courses
+# Course has and belongs to many tasks
+# Task belongs to a course, task has a guide, task has a test
+# Task has many enrollments
+# Tasks has many enrollees through enrollments

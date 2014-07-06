@@ -1,0 +1,11 @@
+<h1>ENROLLMENT PAGE FOR <%= @task.name %></h1>
+
+<strong><h4>Description: </h4></strong><%= @task.description %>
+
+<strong><h4>Extra Reading and Practice</h4></strong>
+
+<% @task.guide.body.split(" ").each do |link|%>
+	<%= link_to link, link %>
+	<br/>
+<% end %>
+

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140706163839) do
+ActiveRecord::Schema.define(version: 20140706181007) do
 
   create_table "achievements", force: true do |t|
     t.string   "name"
@@ -54,6 +54,14 @@ ActiveRecord::Schema.define(version: 20140706163839) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "task_id"
+  end
+
+  create_table "lessons", force: true do |t|
+  end
+
+  create_table "links", force: true do |t|
+    t.string  "body"
+    t.integer "guide_id"
   end
 
   create_table "modules", force: true do |t|
@@ -118,6 +126,10 @@ ActiveRecord::Schema.define(version: 20140706163839) do
     t.string   "last_sign_in_ip"
     t.string   "name"
     t.string   "profile_pic"
+    t.string   "pro_pic_file_name"
+    t.string   "pro_pic_content_type"
+    t.integer  "pro_pic_file_size"
+    t.datetime "pro_pic_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
