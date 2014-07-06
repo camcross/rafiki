@@ -1,20 +1,21 @@
-h1 {
-	font-family: 'lobster', sans-serif;
-	font-size: 45px;
-	text-align: center;
-}
+
 .col-md-4 {
+	position: relative;
+	top: 340px;
 	color: #004443;
 	font-size: 50px;
 	text-align: center;
 	font-family: 'Indie Flower', sans-serif;
 	vertical-align: center;
-		background-color: black;
+	margin-bottom: 40px;
 	.Links {
 		color: #004443;
 	}
 }
-
+body {
+	height: 1000px;
+	background-color: #8CD46D;
+}
 .col-md-3 {
 	color: #002E34;
 	text-align: center;
@@ -25,8 +26,16 @@ h1 {
 	font-weight: bold;
 
 }
+.welcome_message {
+	position: absolute;
+	top: 200px;
+	font-family: 'lobster', sans-serif;
+	color: white;
+	font-size: 45px;
+	text-align: center;
+}
 #container {
-	height: 88%;
+	height: 390px;
 	background: url('Leaf.jpg') no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -39,13 +48,18 @@ h1 {
 	overflow: hidden;
 	z-index: -1;
 }
-body {
-	background-color: #80E547;
-}
+
 .badge {
-	background-color: #80E547;	
-	margin: 27px;
-	padding: 25px;
+	background: #958178 no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	position: absolute;
+	top: 700px;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	z-index: -1;
 	h2 {
 		font-family: 'lobster', sans-serif;
 		font-size: 35px;
