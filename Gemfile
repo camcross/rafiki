@@ -1,17 +1,20 @@
 source 'https://rubygems.org'
-
+ 
 gem 'devise'
-gem 'better_errors'
-gem 'binding_of_caller'
+
+gem 'better_errors', group: :development
+gem 'binding_of_caller', group: :development
+
 gem 'bootstrap-sass'
 gem 'tzinfo-data'
 gem 'paperclip'
 
 gem 'rails_12factor', group: :production
 
+# gem 'rails_12factor', group: :production
 
 # :development do
-	gem 'quiet_assets'
+	gem 'quiet_assets', group: :development
 # end	
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

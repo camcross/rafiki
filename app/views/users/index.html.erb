@@ -1,43 +1,56 @@
 <!-- Generate Profile Picture and Caption it with User Name -->
-<<<<<<< HEAD
+
 <div id="container"></div>
 
-<h1>Welcome, <%= "#{current_user.name.capitalize}"%>!</h1>
+<h1 class= "welcome_message" id = "top">Welcome to your personal page, <%= "#{current_user.name.capitalize}" %>!</h1>
 
 <div class="row">
-	<a href="#badges" class="col-md-4 Links">Badges</a>
-	
-	<div class="col-md-4">PROFILE PICTURE
-		<div><%=link_to image_tag("silhouette.jpg")%></div>
-		<div><%= "#{current_user.name.capitalize}"%></div>
+
+	<div class="col-md-4">
+		<%=link_to image_tag("silhouette.jpg", class: "img-circle")  %></br>
+		<%= "#{current_user.name.capitalize}"%>
+	</div>
+	<div class="col-md-4 Links">
+		<%=link_to image_tag("shield.png") %></br>
+		<a href="#badges", class = "Links">
+			Badges
+		</a>
 	</div>
 
-	<div class="col-md-4 Links"><%= link_to 'ENROLLMENTS', enrollments_path %></div>
 
-</div>
+	<div class="col-md-4 Links">
+		<%=link_to image_tag("enrollment.png") %></br>
+		<a href="#progress", class = "Links">
+			Progress
+		</a>
+	</div>
 
-<div class="row">
-
-	<div class="col-md-4"><%= link_to 'Learn', subjects_path, class: "Links" %></div>
-
-	<div class="col-md-4 Links">Teach</div>
-
-
-	<div class="col-md-4 Links">Connect</div>
-
-	
 </div>
 
 <div class = "row badge">
 	<% badges = Badge.all %>
 
-<h2 id="badges">Badges</h2>
+	<h2 id="badges">
+		Badges
+	</h2>
 
 	<% badges.each do |badge| %>
 	<div class= "col-md-3">
 		<strong><%= badge.name %></strong></br></br>
-		<%= image_tag("#{badge.icon}") %></br></br>
-	</div>
+		<%= image_tag("#{badge.icon}") %>	
+	</div>	
 	<% end %>
-</div>
+
+	<div class = "col-md-6"><a href="#top", class = "top_link">Back To Top</a></div>	
+	<div class = "col-md-6"><a href="#progress", class = "top_link">View Progress</a></div>
+
+</div>	
+
+<!-- <div class = "progress"id="progress">
+<h1>Progress</h1>
+<p> This is where all the progress data will be placed</p>
+
+</div> -->
+
+
 
