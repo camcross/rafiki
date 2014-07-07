@@ -11,6 +11,7 @@
 	end
 
 	def show
+		@options = ["A", "B", "C", "D"]
 		@task = Task.find(params[:id])
 
 		@enrollment = Enrollment.new

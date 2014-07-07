@@ -3,7 +3,7 @@
 <% enrollments = Enrollment.all %>
 <% enrollments.each do |e| %>
 <% if e.enrollee.id == current_user.id %>
-	<strong><h3>Task: </strong><%= e.task.name %></h3>
+	<strong><h3>Task: </strong><%= e.@task.name %></h3>
 	<strong><h3>Status: </strong><%= e.status %></h3>
 <% end %>
 <% end %>

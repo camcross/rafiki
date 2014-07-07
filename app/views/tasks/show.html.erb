@@ -1,20 +1,16 @@
 <h1>ENROLLMENT PAGE FOR <%= @task.name %></h1>
-
 <strong><h4>Description: </h4></strong><%= @task.description %>
-
 <strong><h4>Read About It</h4></strong>
-
 <% @task.guide.body.split(" ").each do |link|%>
-	<%= link_to link, link %>
-	<br/>
+<%= link_to link, link %>
+<br/>
 <% end %>
-
 <strong><h4>Practice</h4></strong>
-
 <% @task.guide.practice.split(" ").each do |link|%>
-	<%= link_to link, link %>
-	<br/>
+<%= link_to link, link %>
+<br/>
 <% end %>
+
 
 <div class = "course-header", id = "test_link">
 	<strong><h4><a href="#take_test">Take Test</a></h4></strong>
@@ -27,16 +23,22 @@
 	<br/>
 	<%= @task.test.body %>
 	<br/><br/>
+	<%= form_tag "/tests/check" do %>
+	<input type="hidden" name="task_id" value=<%= params[:id] %> >
+
 	<ol>
 		<% @task.test.questions.each do |question| %>
 		<li><%= question.body %></li>
 		<div class="questions">
-			<% question.options.each do |option| %>
-				<input type="radio" class="questions"><%= option.body %>
-				<br/>
+			<% question.options.each_with_index do |option, index| %>
+			<input type="radio" name=<%= "question#{question.id}" %> value="<%= @options[index] %>" class="answers">
+			<%= @options[index] + ") " + option.body %>
+			<br/>
 			<% end %>
-		</div>	
-		<% end %>	
+		</div>
+		<% end %>
 	</ol>
+	<input type="submit" name="Submit" value="Submit">
+	<% end %>
 </div>
 

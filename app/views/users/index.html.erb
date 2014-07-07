@@ -46,11 +46,14 @@
 
 </div>	
 
-<!-- <div class = "progress"id="progress">
-<h1>Progress</h1>
-<p> This is where all the progress data will be placed</p>
+<div class = "progress badge"
+	<div id="progress">
+	<% current_user.enrollments.each do |e| %>
+	<%= e.name %>
+	<% end %> 
+	</div>
 
-</div> -->
+
 
 
 
