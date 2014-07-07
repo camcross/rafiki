@@ -10,5 +10,5 @@ class User < ActiveRecord::Base
 	has_many :created_tasks, :source => :tasks, :foreign_key => :author_id
 	#for users who will enroll in tasks
 	has_many :enrollments
-	has_many :enrolled_tasks, :source => :tasks, :foreign_key => :enrollee_id 
+	has_many :enrollments, :source => :tasks, :foreign_key => :enrollee_id 
 end

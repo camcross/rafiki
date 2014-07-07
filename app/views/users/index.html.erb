@@ -48,10 +48,13 @@
 
 <div class = "progress badge"
 	<div id="progress">
-	<% current_user.enrollments.each do |e| %>
-	<%= e.name %>
-	<% end %> 
-	</div>
+<% @enrollments.each do |e| %>
+
+	<strong><h3>Task: </strong><%= e.task.name %></h3>
+	<strong><h3>Status: </strong><%= e.status %></h3>
+
+<% end %>
+</div>
 
 
 

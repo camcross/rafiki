@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 	
 	def index
 		@user = User.all
+		@enrollments = Enrollment.all
 	end	
 
 	def new
