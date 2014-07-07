@@ -8,10 +8,12 @@ class UsersController < ApplicationController
 
 	def new
 		@user = User.new
+		@user.points = 0
 	end
 
 	def create
 		@user = User.new(user_params)
+		@user.points = 0
 		@user.save
 		redirect_to :action => :index
 	end

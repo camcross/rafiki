@@ -2,7 +2,6 @@ source 'https://rubygems.org'
  
 gem 'devise'
 
-gem 'better_errors', group: :development
 gem 'binding_of_caller', group: :development
 
 gem 'bootstrap-sass'

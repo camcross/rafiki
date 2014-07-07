@@ -64,8 +64,8 @@
 	font-size: 30px;
 	color: white;	
 }
-/*.progress {
-	background: white no-repeat center center fixed;
+.progress {
+	background: black no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -73,5 +73,5 @@
 	top: 1270px;
 	left: 0;
 	right: 0;
-	z-index: -1;
-}*/
+	height: 100%;
+}

@@ -1,0 +1,4 @@
+<h1>Congrats on completing the <strong><%= @test.task.name %></strong> test, <%= current_user.name %>!</h1>
+<h2>Here are your results: </h2>
+
+<strong><h3>Score: <%= @score %>/<%= @count %> = <%= ((@score.to_f/@count.to_f) * 100) %>%</h3></strong>

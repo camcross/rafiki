@@ -6,6 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+
+Subject.destroy_all
+
 Subject.create({ name: 'Math' })
 Subject.create(:name => "Science")
 Subject.create(:name => "Languages")

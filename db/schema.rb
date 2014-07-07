@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140706211225) do
+ActiveRecord::Schema.define(version: 20140707220233) do
 
   create_table "achievements", force: true do |t|
     t.string   "name"
@@ -55,6 +55,9 @@ ActiveRecord::Schema.define(version: 20140706211225) do
     t.datetime "updated_at"
     t.integer  "task_id"
     t.string   "practice"
+  end
+
+  create_table "lessons", force: true do |t|
   end
 
   create_table "links", force: true do |t|
@@ -127,6 +130,7 @@ ActiveRecord::Schema.define(version: 20140706211225) do
     t.string   "last_sign_in_ip"
     t.string   "name"
     t.string   "profile_pic"
+    t.integer  "points"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

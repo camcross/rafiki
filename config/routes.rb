@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get 'enrollments/welcome' => 'enrollments#welcome'
 
+  post '/tests/check' => 'tests#check'
+
 
   resources :subjects, :only => [:index, :new, :create, :show]
 

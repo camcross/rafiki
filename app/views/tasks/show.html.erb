@@ -1,40 +1,35 @@
 <h1>ENROLLMENT PAGE FOR <%= @task.name %></h1>
-
 <strong><h4>Description: </h4></strong><%= @task.description %>
-
 <strong><h4>Read About It</h4></strong>
-
 <% @task.guide.body.split(" ").each do |link|%>
-	<%= link_to link, link %>
-	<br/>
-<% end %>
-
-<strong><h4>Practice</h4></strong>
-
-<% @task.guide.practice.split(" ").each do |link|%>
-	<%= link_to link, link %>
-	<br/>
-<% end %>
-
-<strong><h4><a href="#take_test">Take Test</a></h4></strong>
-
-<div id="take_test">
-<strong><h4>TAKE TEST: </h4></strong>
+<%= link_to link, link %>
 <br/>
-<%= @task.test.body %>
-<br/><br/>
-<form name=<%= "#{@task.name} test" %> action=<% users_path %> method="post">
-<ol>
-	<% @task.test.questions.each do |question| %>
-	<li><%= question.body %></li>
-	<div class="questions">
-		<% question.options.each_with_index do |option, index| %>
-			<input type="radio" name=<%= "question#{question.id}" %> value=<%= @options[index] %> class="answers"><%= @options[index] + ") " + option.body %>
+<% end %>
+<strong><h4>Practice</h4></strong>
+<% @task.guide.practice.split(" ").each do |link|%>
+<%= link_to link, link %>
+<br/>
+<% end %>
+<strong><h4><a href="#take_test">Take Test</a></h4></strong>
+<div id="take_test">
+	<strong><h4>TAKE TEST: </h4></strong>
+	<br/>
+	<%= @task.test.body %>
+	<br/><br/>
+	<%= form_tag "/tests/check" do %>
+	<input type="hidden" name="task_id" value=<%= params[:id] %> >
+	<ol>
+		<% @task.test.questions.each do |question| %>
+		<li><%= question.body %></li>
+		<div class="questions">
+			<% question.options.each_with_index do |option, index| %>
+			<input type="radio" name=<%= "question#{question.id}" %> value="<%= @options[index] %>" class="answers">
+			<%= @options[index] + ") " + option.body %>
 			<br/>
+			<% end %>
+		</div>
 		<% end %>
-	</div>	
-	<% end %>	
-</ol>
-<input type="submit" name="Submit" value="Submit">
+	</ol>
+	<input type="submit" name="Submit" value="Submit">
+	<% end %>
 </div>
-
