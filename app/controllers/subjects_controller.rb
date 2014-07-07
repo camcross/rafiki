@@ -3,6 +3,8 @@ class SubjectsController < ApplicationController
   	before_action :authenticate_user!
 	def index
 		@subjects = Subject.all
+		@courses = Course.all
+		@tasks = Task.all
 	end	
 
 	def new

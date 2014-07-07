@@ -16,23 +16,27 @@
 	<br/>
 <% end %>
 
-<strong><h4><a href="#take_test">Take Test</a></h4></strong>
+<div class = "course-header", id = "test_link">
+	<strong><h4><a href="#take_test">Take Test</a></h4></strong>
+</div>
 
 <div id="take_test">
-<strong><h4>TAKE TEST: </h4></strong>
-<br/>
-<%= @task.test.body %>
-<br/><br/>
-<ol>
-	<% @task.test.questions.each do |question| %>
-	<li><%= question.body %></li>
-	<div class="questions">
-		<% question.options.each do |option| %>
-			<input type="radio" class="questions"><%= option.body %>
-			<br/>
-		<% end %>
-	</div>	
-	<% end %>	
-</ol>
+
+	<strong><h4>TAKE TEST: </h4></strong>
+
+	<br/>
+	<%= @task.test.body %>
+	<br/><br/>
+	<ol>
+		<% @task.test.questions.each do |question| %>
+		<li><%= question.body %></li>
+		<div class="questions">
+			<% question.options.each do |option| %>
+				<input type="radio" class="questions"><%= option.body %>
+				<br/>
+			<% end %>
+		</div>	
+		<% end %>	
+	</ol>
 </div>
 
