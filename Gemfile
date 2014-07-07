@@ -7,6 +7,9 @@ gem 'bootstrap-sass'
 gem 'tzinfo-data'
 gem 'paperclip'
 
+gem 'rails_12factor', group: :production
+
+
 # :development do
 	gem 'quiet_assets'
 # end	
@@ -14,7 +17,10 @@ gem 'paperclip'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: :development
+
+#Used for production
+gem 'pg', group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets

@@ -23,16 +23,18 @@
 <br/>
 <%= @task.test.body %>
 <br/><br/>
+<form name=<%= "#{@task.name} test" %> action=<% users_path %> method="post">
 <ol>
 	<% @task.test.questions.each do |question| %>
 	<li><%= question.body %></li>
 	<div class="questions">
-		<% question.options.each do |option| %>
-			<input type="radio" class="questions"><%= option.body %>
+		<% question.options.each_with_index do |option, index| %>
+			<input type="radio" name=<%= "question#{question.id}" %> value=<%= @options[index] %> class="answers"><%= @options[index] + ") " + option.body %>
 			<br/>
 		<% end %>
 	</div>	
 	<% end %>	
 </ol>
+<input type="submit" name="Submit" value="Submit">
 </div>
 

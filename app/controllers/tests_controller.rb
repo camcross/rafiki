@@ -4,4 +4,10 @@ class TestsController < ApplicationController
 	def new
 		@test = Test.new
 	end
+
+	def check
+		@values.each do |o|
+			o
+		end
+	end
 end
