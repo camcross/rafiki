@@ -16,6 +16,12 @@
 //= require_tree .
 
 $(document).ready(function(){
+	//for show/hide
+		$('.course-header').click(function() {
+	    	$(this).next().toggle("fast");
+	    });
+
+    //For scrolling
 	$('a[href^="#"]').on('click',function (e) {
 	    e.preventDefault();
 
@@ -29,3 +35,4 @@ $(document).ready(function(){
 	    });
 	});
 });
+

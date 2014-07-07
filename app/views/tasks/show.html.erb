@@ -10,14 +10,22 @@
 <%= link_to link, link %>
 <br/>
 <% end %>
-<strong><h4><a href="#take_test">Take Test</a></h4></strong>
+
+
+<div class = "course-header", id = "test_link">
+	<strong><h4><a href="#take_test">Take Test</a></h4></strong>
+</div>
+
 <div id="take_test">
+
 	<strong><h4>TAKE TEST: </h4></strong>
+
 	<br/>
 	<%= @task.test.body %>
 	<br/><br/>
 	<%= form_tag "/tests/check" do %>
 	<input type="hidden" name="task_id" value=<%= params[:id] %> >
+
 	<ol>
 		<% @task.test.questions.each do |question| %>
 		<li><%= question.body %></li>
@@ -33,3 +41,4 @@
 	<input type="submit" name="Submit" value="Submit">
 	<% end %>
 </div>
+

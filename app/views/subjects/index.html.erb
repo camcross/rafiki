@@ -1,15 +1,33 @@
-<h1>LEARN</h1>
+<div id="toppas"></div>
+<div class="topper">
+
+<h1>Learn</h1>
 
 <!-- List subject names in bold; related categories follow accordingly -->
-<% @subjects.each do |subject|%>
-	<strong><%= subject.name %></strong>
-	<br/>
-	<% courses = Course.all %>
-	<% courses.each do |course| %>
-		<% if course.subject_id == subject.id %>
-			<%= link_to course.name, "/courses/#{course.id}" %>
-			<br/>
+
+	<% @subjects.each do |subject|%>
+	<div class ="wrap_around_subjects">
+		<strong><%= subject.name %></strong>
+		<br/>
+		<% @courses.each do |course| %>
+			<% if course.subject_id == subject.id %>
+				<div class="course-header" id = "header">
+					<%= course.name %>
+		    	</div>
+		    	<div class = "information">
+					<% @tasks.each do |task| %>
+						<% if task.course_id == course.id %>
+								<strong>Name: </strong><%= task.name %>
+								<br/>
+								<strong>Description: </strong><%= task.description %>
+								<br/> 
+								<strong>Reward: </strong><%= task.points %> points	</br>
+								<%= link_to 'Enroll here', "/tasks/#{task.id}" %>	
+	    				<% end %>
+	    		</div>
+					<% end %>
 		<% end %>	
-	<% end %>	
-	<br/>
-<% end %>	
+	<% end %>
+</div>
+	<% end %>
+</div> 
