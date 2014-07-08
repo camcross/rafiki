@@ -13,12 +13,13 @@
 	def show
 		@options = ["A", "B", "C", "D"]
 		@task = Task.find(params[:id])
-
-		@enrollment = Enrollment.new
-		@enrollment.status = "In Progress"
-		@enrollment.enrollee_id = current_user.id
-		@enrollment.task_id = params[:id]
-		@enrollment.save
+		unless current_user.tasks.include?(@task)
+			@enrollment = Enrollment.new
+			@enrollment.status = "In Progress"
+			@enrollment.user_id = current_user.id
+			@enrollment.task_id = params[:id]
+			@enrollment.save
+		end
 		# if @enrollment.save
 		# 	flash[:something] = "Enrollment successful!"
 	end

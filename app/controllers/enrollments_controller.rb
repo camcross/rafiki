@@ -20,7 +20,7 @@ class EnrollmentsController < ApplicationController
 	def create
 		@enrollment = Enrollment.new
 		@enrollment.status = "In Progress"
-		@enrollment.enrollee_id = current_user.id
+		@enrollment.user_id = current_user.id
 		@enrollment.task_id = 1
 		@enrollment.save
 		redirect_to :action => :welcome

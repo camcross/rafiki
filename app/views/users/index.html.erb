@@ -45,13 +45,16 @@
 	<div class = "col-md-6"><a href="#progress", class = "top_link">View Progress</a></div>
 
 </div>	
-
 <div class = "progress badge"
 	<div id="progress">
-	<% current_user.enrollments.each do |e| %>
-	<%= e.name %>
-	<% end %> 
-	</div>
+<% @enrollments.each do |e| %>
+	<% if e.user_id == current_user.id %>
+	<strong><h3>Task: </strong><%= e.task.name %></h3>
+	<strong><h3>Status: </strong><%= e.status %></h3>
+	<%= link_to 'View Course Page', "/tasks/#{e.task.id}" %>
+	<% end %>
+<% end %>
+</div>
 
 
 

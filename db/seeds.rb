@@ -114,6 +114,55 @@ Option.create(:question_id => 8, :body => "√35 inches")
 
 
 
+Task.create(:name => "Points, Lines and Angles", :points => 10, :course_id => 1, :description => "Any and all shapes
+	, figures and drawings are composed of points, lines and angles. The first step to having a solid grasp of core
+	geometric principles starts here!")
+
+Guide.create(:task_id => 2, :body => "http://www.sparknotes.com/testprep/books/newsat/powertactics/geometry/chapter2section1.rhtml 
+	http://www.virtualnerd.com/pre-algebra/geometry/points-lines-planes-angles 
+	http://www.cliffsnotes.com/math/geometry/fundamental-ideas/points-lines-and-planes", :practice =>
+	"http://www.regentsprep.org/Regents/math/geometry/MultipleChoiceReviewG/Locus.html 
+	http://www.quibblo.com/quiz/9HhKg2d/Geometry-Test-One-Points-Lines-Planes-Angles-and-Congruent-Figures 
+	http://www.regentsprep.org/Regents/math/geometry/GP5/PAngles.htm")
+
+Test.create(:task_id => 2, :body => "Answer the following 8 questions, double-check your answers, then click Submit.
+	A score of 100% (8/8) is needed to pass this task")
+
+Question.create(:test_id => 2, :body => "Alexis draws a box on the front cover of her new notebook. The lines making
+	up the left and right sides of her box are: ", :answer => "B")
+
+Option.create(:question_id => 9, :body => "Perpendicular")
+Option.create(:question_id => 9, :body => "Parallel")
+Option.create(:question_id => 9, :body => "Intersecting")
+Option.create(:question_id => 9, :body => "Obtuse")
+
+Question.create(:test_id => 2, :body => "Stacie hopes to make a connect-the-dots game. What is the minimum number 
+	of points she needs to connect in order to make at least one line? ", :answer => "B")
+
+Option.create(:question_id => 10, :body => "1")
+Option.create(:question_id => 10, :body => "2")
+Option.create(:question_id => 10, :body => "3")
+Option.create(:question_id => 10, :body => "4")
+
+Question.create(:test_id => 2, :body => "If Devon draws two complementary angles and measures one to be 
+	25 degrees, what is the measure of the second angle?", :answer => "C")
+
+Option.create(:question_id => 11, :body => "25 degrees")
+Option.create(:question_id => 11, :body => "45 degrees")
+Option.create(:question_id => 11, :body => "65 degrees")
+Option.create(:question_id => 11, :body => "85 degrees")
+
+Question.create(:test_id => 2, :body => "Two angles measure 70 degrees and 110 degrees. These angles are: 
+	", :answer => "C")
+
+Option.create(:question_id => 12, :body => "Complementary")
+Option.create(:question_id => 12, :body => "Supplementary")
+Option.create(:question_id => 12, :body => "Elementary")
+Option.create(:question_id => 12, :body => "Not enough information")
+
+
+
+
 
 
 
