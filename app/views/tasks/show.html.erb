@@ -1,24 +1,26 @@
-<h1>ENROLLMENT PAGE FOR <%= @task.name %></h1>
-<strong><h4>Description: </h4></strong><%= @task.description %>
-<strong><h4>Read About It</h4></strong>
-<% @task.guide.body.split(" ").each do |link|%>
-<%= link_to link, link %>
-<br/>
-<% end %>
-<strong><h4>Practice</h4></strong>
-<% @task.guide.practice.split(" ").each do |link|%>
-<%= link_to link, link %>
-<br/>
-<% end %>
 
+<div class = "surround-upper-content">
 
-<div class = "course-header", id = "test_link">
-	<strong><h4><a href="#take_test">Take Test</a></h4></strong>
+	<h1>Enrollment Page: <%= @task.name %></h1>
+	<strong><h4>Description: </h4></strong>
+	<%= @task.description %>
+	<strong><h4>Read About It</h4></strong>
+	<% @task.guide.body.split(" ").each do |link|%>
+	<%= link_to link, link %>
+	<br/>
+	<% end %>
+	<strong><h4>Practice</h4></strong>
+	<% @task.guide.practice.split(" ").each do |link|%>
+	<%= link_to link, link %>
+	<br/>
+	<% end %>
 </div>
+	<div class = "course-header">
+		<a class="test-button" href="#take_test">Take Test</a>
+	</div>
 
-<div id="take_test">
 
-	<strong><h4>TAKE TEST: </h4></strong>
+<div class="take_test_view" id="take_test">
 
 	<br/>
 	<%= @task.test.body %>

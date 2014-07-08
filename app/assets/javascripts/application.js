@@ -12,13 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 
 $(document).ready(function(){
 	//for show/hide
 		$('.course-header').click(function() {
-	    	$(this).next().toggle("fast");
+	    	$(this).next().toggle("slow");
 	    });
 
     //For scrolling

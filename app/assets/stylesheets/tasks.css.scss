@@ -1,3 +1,42 @@
-#take_test {
+
+h1 {
+	text-align: center;
+	font-family: 'lobster', sans-serif;
+	font-size: 50px;
+	padding-bottom: 8px;	
+	color: #0B486B;
+}
+.surround-upper-content{
+
+	font-size: 20px;
+	font-family: 'Oxygen', sans-serif;
+	padding: 6px;
+	margin: 20px;
+	color: black;
+	font-size: 16px;
+	line-height: 140%;
+
+}
+.take_test_view {
+	background-color: #EEEEEE;
 	display: none;
+	margin: 20px;
+	padding: 40px;
+	font-family: 'roboto', sans-serif;
+	font-size: 16px;
+}
+.test-button {
+	background-color: #EEEEEE;	
+	font-size: 20px;
+	font-family: 'Oxygen', sans-serif;
+	padding: 7px;
+	margin: 20px;
+	color: black;
+	font-size: 16px;
+	line-height: 140%;
+	border-radius: 5px;
+	border: black 2px;
+}
+.read_about_it {
+	text-align: right;
 }

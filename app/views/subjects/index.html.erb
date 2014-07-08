@@ -1,12 +1,12 @@
 <div id="toppas"></div>
-<div class="topper">
+<div class="row" id = "topper">
 
 <h1>Learn</h1>
 
 <!-- List subject names in bold; related categories follow accordingly -->
 
 	<% @subjects.each do |subject|%>
-	<div class ="wrap_around_subjects">
+	<div id ="wrap_around_subjects" class = "col-md-1">
 		<strong><%= subject.name %></strong>
 		<br/>
 		<% @courses.each do |course| %>
@@ -22,7 +22,7 @@
 								<strong>Description: </strong><%= task.description %>
 								<br/> 
 								<strong>Reward: </strong><%= task.points %> points	</br>
-								<%= link_to 'Enroll here', "/tasks/#{task.id}" %>	
+								<%= link_to 'Enroll here', "/tasks/#{task.id}", class: "enroll" %>	
 	    				<% end %>
 	    		</div>
 					<% end %>
