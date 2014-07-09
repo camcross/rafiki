@@ -12,9 +12,10 @@
 	<% end %>
 	<% if m.user_id != current_user.id %>
 		<strong>Your Partner: <%= m.user.name %></strong>
+		<%= link_to 'View Team Page', "/mentorships/tutor_video", method: :get %>
 		<% else %>
 		<strong><%= m.tutor.name %></strong>
+		<%= link_to 'View Team Page', "/mentorships/user_video", method: :get %>
 		<% end %>
 		</br>
-	<%= link_to 'View Team Page', "/mentorships/#{m.id}", method: :put %>
 <% end %>

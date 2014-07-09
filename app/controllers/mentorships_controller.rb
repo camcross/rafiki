@@ -32,4 +32,10 @@ class MentorshipsController < ApplicationController
 		@mentorship.status = "Complete"
 		@mentorship.save
 	end
+
+	def tutor_video
+	end
+
+	def user_video
+	end
 end
