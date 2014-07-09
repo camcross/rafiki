@@ -6,6 +6,8 @@ class CreateMentorships < ActiveRecord::Migration
     	t.integer :enrollment_id
 
     	t.integer :tutor_id
+
+    	
     end
   end
 end

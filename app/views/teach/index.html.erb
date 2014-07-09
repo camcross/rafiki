@@ -1,9 +1,14 @@
 <h1>You are qualified to teach the following tasks: </h1>
 
-<% @enrollments.each do |e| %>
-			<% if e.status == "Complete" %>
-				<strong><%= e.task.name %></strong>
-				<%= link_to 'See Task', "/tasks/#{e.task.id}" %>
+<% @enrollments.each do |enrollment| %>
+			<% if enrollment.status == "Complete" %>
+				<strong><%= enrollment.task.name %></strong>
+				<%= link_to 'See Task', "/tasks/#{enrollment.task.id}" %>
+					<% @mentorships.each do |m| %>
+						<% if m.enrollment.task.name == enrollment.task.name && m.user != current_user%>
+							<%= "#{m.user.name} needs help!" %>
+						<% end %>	
+					<% end %>	
 				<br/>
 			<% end %>
 	<% end %> 
