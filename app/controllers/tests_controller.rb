@@ -6,7 +6,7 @@ class TestsController < ApplicationController
 	end
 
 	def check
-		@enrollment = current_user.enrollments.find(params[:task_id])
+		@enrollment = current_user.enrollments.find_by_task_id(params[:task_id])
 		@count = 0
 		@score = 0
 		@test = Test.find(params[:task_id])

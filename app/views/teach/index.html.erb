@@ -5,8 +5,11 @@
 				<strong><%= enrollment.task.name %></strong>
 				<%= link_to 'See Task', "/tasks/#{enrollment.task.id}" %>
 					<% @mentorships.each do |m| %>
-						<% if m.enrollment.task.name == enrollment.task.name && m.user != current_user%>
+						<% if m.enrollment.task.name == enrollment.task.name && m.user != current_user && 
+							m.status == "Pending"%>
 							<%= "#{m.user.name} needs help!" %>
+							<%= link_to 'Connect', "/mentorships/#{m.id}", method: :put %>
+							<br/>
 						<% end %>	
 					<% end %>	
 				<br/>
