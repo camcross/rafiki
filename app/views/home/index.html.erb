@@ -1,7 +1,8 @@
 <!-- <div class="main"> -->
 	<div id="cloud-container"><div>
 	
-	<h1 class="head">Welcome to Canopy Connect!</h1>
+<!-- 	<h1 class="head">Welcome to Canopy Connect!</h1> -->
+	<%= link_to image_tag "logo.png", class: "logo" %>
 
 	<% if user_signed_in? %>
 		Welcome, <%= current_user.name %>!

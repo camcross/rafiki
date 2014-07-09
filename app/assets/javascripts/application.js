@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require bootstrap-sprockets
 
 $(document).ready(function(){
 	//for show/hide
@@ -33,5 +34,6 @@ $(document).ready(function(){
 	        window.location.hash = target;
 	    });
 	});
+	$('#myModal').modal(options)
 });
 
