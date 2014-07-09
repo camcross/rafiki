@@ -25,6 +25,12 @@ class EnrollmentsController < ApplicationController
 		@enrollment.save
 		redirect_to :action => :welcome
 	end
+
+	def complete
+		@enrollment.status = "Complete"
+	end
+
+	private
 	
 	def enrollment_params
 		params.require(:enrollment).permit()

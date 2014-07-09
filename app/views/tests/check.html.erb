@@ -2,3 +2,12 @@
 <h2>Here are your results: </h2>
 
 <strong><h3>Score: <%= @score %>/<%= @count %> = <%= ((@score.to_f/@count.to_f) * 100) %>%</h3></strong>
+
+
+<% if @score == @count %>
+	<%= @enrollment.status %>
+	<h1>HAI</h1>
+<% end %>
+
+
+

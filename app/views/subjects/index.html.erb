@@ -11,14 +11,13 @@
 		<br/>
 		<% @courses.each do |course| %>
 			<% if course.subject_id == subject.id %>
-			<!-- The java script will not work here SOS -->
-				<div class = "course-header" id = "header">
+			<!-- The java script will not work here SOS class = "course-header" -->
+				<div id = "header">
 					<%= course.name %>
 		    	</div>
 		    	
 					<% @tasks.each do |task| %>
-						<div class = "information">
-
+					<div class = "information">
 						<% if task.course_id == course.id %>
 								<strong>Name: </br> </strong><%= task.name %>
 								<br/>

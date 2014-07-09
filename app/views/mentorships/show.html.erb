@@ -1,0 +1,8 @@
+<h1>MENTORSHIP SHOW PAGE</h1>
+
+<% mentorships = Mentorship.all %>
+
+<% mentorships.each do |m| %>
+<%= m.status %>
+<%= m.user.name %>
+<% end %>

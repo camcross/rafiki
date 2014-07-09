@@ -153,12 +153,29 @@ Option.create(:question_id => 11, :body => "65 degrees")
 Option.create(:question_id => 11, :body => "85 degrees")
 
 Question.create(:test_id => 2, :body => "Two angles measure 70 degrees and 110 degrees. These angles are: 
-	", :answer => "C")
+	", :answer => "B")
 
 Option.create(:question_id => 12, :body => "Complementary")
 Option.create(:question_id => 12, :body => "Supplementary")
 Option.create(:question_id => 12, :body => "Elementary")
 Option.create(:question_id => 12, :body => "Not enough information")
+
+Question.create(:test_id => 2, :body => "Dave draws two supplementary angles, and tells his friend that one of the 
+	angles measures either 110 degrees or 70 degrees, and that the second angle is acute. What does the second angle
+	measure?", :answer => "D")
+
+Option.create(:question_id => 13, :body => "100 degrees")
+Option.create(:question_id => 13, :body => "110 degrees")
+Option.create(:question_id => 13, :body => "80 degrees")
+Option.create(:question_id => 13, :body => "70 degrees")
+
+Question.create(:test_id => 2, :body => "Joanna begins to draw a circle, but stops exactly with exactly 1/4 of the 
+	circle left to draw. What does the resulting angle measure?", :answer => "C")
+
+Option.create(:question_id => 14, :body => "230 degrees")
+Option.create(:question_id => 14, :body => "250 degrees")
+Option.create(:question_id => 14, :body => "270 degrees")
+Option.create(:question_id => 14, :body => "300 degrees")
 
 
 
