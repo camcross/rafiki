@@ -12,6 +12,10 @@ Rails.application.routes.draw do
 
   post '/tests/check' => 'tests#check'
 
+  get 'teach' => 'teach#index'
+
+  post 'mentorships/:id' => 'mentorships#show'
+
 
   resources :subjects, :only => [:index, :new, :create, :show]
 
@@ -20,6 +24,8 @@ Rails.application.routes.draw do
   resources :users
 
   resources :tasks
+
+  resources :mentorships
 
   resources :enrollments, :only => [:create, :index]
 

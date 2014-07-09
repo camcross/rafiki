@@ -47,11 +47,14 @@
 </div>	
 <div class = "progress badge"
 	<div id="progress">
-<% @enrollments.each do |e| %>
+<% @enrollments.each do |e| %> 
 	<% if e.user_id == current_user.id %>
+	<% if e.status == "In Progress" %>
 	<strong><h3>Task: </strong><%= e.task.name %></h3>
 	<strong><h3>Status: </strong><%= e.status %></h3>
 	<%= link_to 'View Course Page', "/tasks/#{e.task.id}" %>
+	<%= e.status %>
+	<% end %>
 	<% end %>
 <% end %>
 </div>

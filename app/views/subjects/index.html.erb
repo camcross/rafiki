@@ -11,11 +11,12 @@
 		<br/>
 		<% @courses.each do |course| %>
 			<% if course.subject_id == subject.id %>
-				<div class="course-header" id = "header">
+				<div id = "header">
 					<%= course.name %>
 		    	</div>
-		    	<div class = "information">
+		    	
 					<% @tasks.each do |task| %>
+					<div class = "information">
 						<% if task.course_id == course.id %>
 								<strong>Name: </strong><%= task.name %>
 								<br/>

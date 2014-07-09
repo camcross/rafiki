@@ -6,14 +6,18 @@ class TestsController < ApplicationController
 	end
 
 	def check
+		@enrollment = current_user.enrollments.find(params[:task_id])
 		@count = 0
 		@score = 0
 		@test = Test.find(params[:task_id])
-		@test.questions.each_with_index do |q, i|
-			if q.answer == params["question#{i+1}"]
+		@test.questions.each do |q|
+			if q.answer == params["question#{q.id}"]
 				@score += 1
 			end
 			@count += 1
+		end
+		if @score == @count
+			@enrollment.update_attribute(:status, "Complete")
 		end
 		# if @score == @count
 		# 	current_user.points += @test.task.points

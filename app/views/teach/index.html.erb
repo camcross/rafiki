@@ -1,0 +1,9 @@
+<h1>You are qualified to teach the following tasks: </h1>
+
+<% @enrollments.each do |e| %>
+			<% if e.status == "Complete" %>
+				<strong><%= e.task.name %></strong>
+				<%= link_to 'See Task', "/tasks/#{e.task.id}" %>
+				<br/>
+			<% end %>
+	<% end %> 
