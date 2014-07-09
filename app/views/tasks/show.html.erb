@@ -1,19 +1,29 @@
 
 <div class = "surround-upper-content">
-
 	<h1>Enrollment Page: <%= @task.name %></h1>
-	<strong><h4>Description: </h4></strong>
-	<%= @task.description %>
-	<strong><h4>Read About It</h4></strong>
-	<% @task.guide.body.split(" ").each do |link|%>
-	<%= link_to link, link %>
-	<br/>
-	<% end %>
-	<strong><h4>Practice</h4></strong>
-	<% @task.guide.practice.split(" ").each do |link|%>
-	<%= link_to link, link %>
-	<br/>
-	<% end %>
+	<div class = "text_box_for_enroll">
+		<strong><h4 class= "inside-header">Description: </h4></strong>
+		<div class = "text_body"><%= @task.description %>
+		</div>
+	</div>
+	<div class = "text_box_for_enroll">
+		<strong><h4 class= "inside-header">Read About It</h4></strong>
+		<div class = "text_body">
+			<% @task.guide.body.split(" ").each do |link|%>
+			<%= link_to link, link %>
+			<br/>
+			<% end %>
+		</div>
+	</div>
+	<div class = "text_box_for_enroll">
+		<strong><h4 class= "inside-header">Practice</h4></strong>
+		<div class = "text_body">
+			<% @task.guide.practice.split(" ").each do |link|%>
+			<%= link_to link, link %>
+		<br/>
+		<% end %>
+		</div>
+	</div>
 </div>
 	<div class = "course-header">
 		<a class="test-button" href="#take_test">Take Test</a>

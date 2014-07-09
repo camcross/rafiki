@@ -11,20 +11,23 @@
 		<br/>
 		<% @courses.each do |course| %>
 			<% if course.subject_id == subject.id %>
-				<div class="course-header" id = "header">
+			<!-- The java script will not work here SOS -->
+				<div class = "course-header" id = "header">
 					<%= course.name %>
 		    	</div>
-		    	<div class = "information">
+		    	
 					<% @tasks.each do |task| %>
+						<div class = "information">
+
 						<% if task.course_id == course.id %>
-								<strong>Name: </strong><%= task.name %>
+								<strong>Name: </br> </strong><%= task.name %>
 								<br/>
-								<strong>Description: </strong><%= task.description %>
+								<strong>Description: </br> </strong><%= task.description %>
 								<br/> 
-								<strong>Reward: </strong><%= task.points %> points	</br>
-								<%= link_to 'Enroll here', "/tasks/#{task.id}", class: "enroll" %>	
+								<strong>Reward: </br> </strong><%= task.points %> points	</br>
+								<%= link_to 'Enroll here', "/tasks/#{task.id}", class: "enroll" %>
 	    				<% end %>
-	    		</div>
+	    			</div>
 					<% end %>
 		<% end %>	
 	<% end %>
