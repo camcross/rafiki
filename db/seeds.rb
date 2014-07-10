@@ -123,8 +123,8 @@ Guide.create(:task_id => 2, :body => "http://www.sparknotes.com/testprep/books/n
 	http://www.quibblo.com/quiz/9HhKg2d/Geometry-Test-One-Points-Lines-Planes-Angles-and-Congruent-Figures 
 	http://www.regentsprep.org/Regents/math/geometry/GP5/PAngles.htm")
 
-Test.create(:task_id => 2, :body => "Answer the following 8 questions, double-check your answers, then click Submit.
-	A score of 100% (8/8) is needed to pass this task")
+Test.create(:task_id => 2, :body => "Answer the following 6 questions, double-check your answers, then click Submit.
+	A score of 100% (6/6) is needed to pass this task")
 
 Question.create(:test_id => 2, :body => "Alexis draws a box on the front cover of her new notebook. The lines making
 	up the left and right sides of her box are: ", :answer => "B")

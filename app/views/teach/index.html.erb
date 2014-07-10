@@ -8,7 +8,7 @@
 						<% if m.enrollment.task.name == enrollment.task.name && m.user != current_user && 
 							m.status == "Pending"%>
 							<%= "#{m.user.name} needs help!" %>
-							<%= link_to 'Connect', "/mentorships/#{m.id}", method: :put %>
+							<%= link_to 'Connect', mentorships_path %>
 							<br/>
 						<% end %>	
 					<% end %>	
