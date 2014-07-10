@@ -7,25 +7,26 @@
 </head>
 <body>
 
-<script type="text/javascript">
-    var apiKey = "44892631";
-    var sessionID = "2_MX40NDg5MjYzMX5-V2VkIEp1bCAwOSAxNDowOTo0NyBQRFQgMjAxNH4wLjA0MjIxNTg4NH5-";
-    var token = "T1==cGFydG5lcl9pZD00NDg5MjYzMSZzaWc9OTZjYjRjZWM0NDY5ODFiZTUyNGE2Y2ZlYTUyMGI3MTVkOGZiNjg5Zjpyb2xlPXB1Ymxpc2hlciZzZXNzaW9uX2lkPTJfTVg0ME5EZzVNall6TVg1LVYyVmtJRXAxYkNBd09TQXhORG93T1RvME55QlFSRlFnTWpBeE5INHdMakEwTWpJeE5UZzROSDUtJmNyZWF0ZV90aW1lPTE0MDQ5NDAxOTUmbm9uY2U9MC42ODg1ODE1OTU2MzMwMDg3JmV4cGlyZV90aW1lPTE0MDc1MzIxNzk=";
-    var session = OT.initSession(apiKey, sessionID);
-    session.on("sessionConnected", function sessionConnectHandler(event) {
-       var publisher = OT.initPublisher("publisher",{width:448, height:336});
-        session.publish(publisher);
-    });
-    session.on("streamCreated", function(event) {
-        var subscriber = session.subscribe(event.stream, "subscribeContainer", {width:448, height:336});
-    });
-    session.connect(token);
-    var publisher;
+    <script type="text/javascript">
+        var apiKey = "44892631";
+        var sessionID = "2_MX40NDg5MjYzMX5-V2VkIEp1bCAwOSAxNDowOTo0NyBQRFQgMjAxNH4wLjA0MjIxNTg4NH5-";
+        var token = "T1==cGFydG5lcl9pZD00NDg5MjYzMSZzaWc9OTZjYjRjZWM0NDY5ODFiZTUyNGE2Y2ZlYTUyMGI3MTVkOGZiNjg5Zjpyb2xlPXB1Ymxpc2hlciZzZXNzaW9uX2lkPTJfTVg0ME5EZzVNall6TVg1LVYyVmtJRXAxYkNBd09TQXhORG93T1RvME55QlFSRlFnTWpBeE5INHdMakEwTWpJeE5UZzROSDUtJmNyZWF0ZV90aW1lPTE0MDQ5NDAxOTUmbm9uY2U9MC42ODg1ODE1OTU2MzMwMDg3JmV4cGlyZV90aW1lPTE0MDc1MzIxNzk=";
+        var session = OT.initSession(apiKey, sessionID);
+        session.on("sessionConnected", function sessionConnectHandler(event) {
+           var publisher = OT.initPublisher("publisher",{width:200, height:150});
+            session.publish(publisher);
+        });
+        session.on("streamCreated", function(event) {
+            var subscriber = session.subscribe(event.stream, "subscribeContainer", {width:448, height:336});
+        });
+        session.connect(token);
+        var publisher;
 
-    function unpublish() {
-        session.unpublish(publisher);
-    }
-</script>
+        function unpublish() {
+            session.unpublish(publisher);
+        }
+    </script>
+
 
 <div id="publisher"></div>
 
