@@ -1,17 +1,19 @@
 <h1>Help others with these challenges: </h1>
 
+<div class = "text_box_for_teach">
 <% @enrollments.each do |enrollment| %>
+<div class="I_hate_cameron">
 			<% if enrollment.status == "Complete" %>
-				<strong><%= enrollment.task.name %></strong>
-				<%= link_to 'See Task', "/tasks/#{enrollment.task.id}" %>
+				<div class = "task_name_for_teach"><%= enrollment.task.name %></div>
+					<%= link_to 'Review Task', "/tasks/#{enrollment.task.id}", :class => 'link_for_teach_page' %>
 					<% @mentorships.each do |m| %>
 						<% if m.enrollment.task.name == enrollment.task.name && m.user != current_user && 
 							m.status == "Pending"%>
-							<%= "#{m.user.name} needs help!" %>
-							<%= link_to 'Connect', mentorships_path %>
-							<br/>
+							<div class = 'task_help_for_teach'><%= "#{m.user.name} needs help!" %></div>
+							<%= link_to 'Connect', mentorships_path, :class => 'connect_for_teach_page' %>
 						<% end %>	
 					<% end %>	
-				<br/>
 			<% end %>
+		</div>
 	<% end %> 
+</div>
