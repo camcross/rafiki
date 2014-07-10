@@ -1,13 +1,15 @@
-<h1>Congrats on completing the <strong><%= @test.task.name %></strong> test, <%= current_user.name %>!</h1>
-<h2>Here are your results: </h2>
+<div class= "test_results_page"> 
+<h2>Congratulations <%= current_user.name %>!</h2>
+<h3>You completed: <strong><%= @test.task.name %></strong></h3>
 
-<strong><h3>Score: <%= @score %>/<%= @count %> = <%= ((@score.to_f/@count.to_f) * 100) %>%</h3></strong>
+<strong><h3>Your Score: <%= @score %>/<%= @count %> = <%= ((@score.to_f/@count.to_f) * 100) %>%</h3></strong>
 
-
+</div>
 <% if @score == @count %>
-	<%= @enrollment.status %>
-	<h1>HAI</h1>
+	<% @enrollment.status %>
+	<%= "Certified Helper" %>
 <% end %>
+
 
 
 

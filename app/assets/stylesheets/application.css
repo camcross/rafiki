@@ -16,7 +16,7 @@
 
 /*@import "bootstrap-sprockets";
 @import "bootstrap";*/
-@import url(http://fonts.googleapis.com/css?family=PT+Sans|Dosis|Oxygen|Lobster|Shadows+Into+Light|Open+Sans+Condensed:300|Indie+Flower|Pacifico|Roboto);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans|Dosis|Oxygen|Lobster|Comfortaa|Shadows+Into+Light|Open+Sans+Condensed:300|Indie+Flower|Pacifico|Roboto);
 
 
 body {
@@ -64,8 +64,9 @@ body {
 }
 .logo {
 	position: absolute;
-	top: 20%;
-	left: 45%;
+	top: 30%;
+	left: 55%;
+	width: 20%;
 }
 
 

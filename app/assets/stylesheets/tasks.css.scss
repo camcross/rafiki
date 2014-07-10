@@ -1,17 +1,18 @@
 
 h1 {
 	text-align: center;
-	font-family: 'lobster', sans-serif;
-	font-size: 50px;
+	font-family: 'Comfortaa', sans-serif;
+	font-size: 40px;
+	padding-top: 20px;
 	padding-bottom: 8px;	
 	color: #0B486B;
 }
 .surround-upper-content{
 	font-size: 20px;
 	font-family: 'Oxygen', sans-serif;
+	color: #0B486B;
 	padding: 6px;
 	margin: 20px;
-	color: black;
 	font-size: 16px;
 	line-height: 140%;
 }
@@ -24,6 +25,7 @@ h1 {
 	font-family: 'roboto', sans-serif;
 	font-size: 16px;
 	border-radius: 7px;
+	border: solid 2px #A3FF75;
 }
 .test-button {
 	text-align: center;
@@ -31,14 +33,35 @@ h1 {
 	font-size: 20px;
 	font-family: 'Oxygen', sans-serif;
 	padding: 7px;
-	margin: 20px;
+	margin-top: 20px;
 	color: #0B486B;
 	font-size: 16px;
 	line-height: 150%;
 	border-radius: 5px;
-	border: black 2px;
+	border: solid 1px #A3FF75;
 	&:hover {
 		background-color: #A3FF75;
+		cursor:pointer;
+		transition: 0.5s;
+	}
+}
+.wrapper-tutor-button {
+	text-align: center;
+	margin: 30px;
+}
+.tutor-button {
+	text-align: center;
+	background-color: #A3FF75;	
+	font-size: 20px;
+	font-family: 'Oxygen', sans-serif;
+	padding: 10px;
+	margin-bottom: 20px;
+	color: #0B486B;
+	line-height: 150%;
+	border-radius: 5px;
+	border: solid 1px #A3FF75;
+	&:hover {
+		background-color: #EEE;
 		cursor:pointer;
 		transition: 0.5s;
 	}
@@ -74,4 +97,16 @@ h1 {
 }
 #buttons {
 	text-align: center;
+}
+#ugly-submit {
+	background-color: #A3FF75;	
+	font-size: 16px;
+	font-family: 'Oxygen', sans-serif;
+	padding: 7px;
+	color: #0B486B;
+	border: solid 2px  #A3FF75;
+}
+.test_results_page {
+	font-family: 'Oxygen', sans-serif;
+	color: #0B486B;
 }

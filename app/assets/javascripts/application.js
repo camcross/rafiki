@@ -34,6 +34,25 @@ $(document).ready(function(){
 	        window.location.hash = target;
 	    });
 	});
-	$('#myModal').modal(options)
+	// respond to the click on the submit button
+	// do a get request that directs us the the check action of the tests controller
+	// render the view that shows the graded test
+	// replace the modal body with that view
+	$('#test_form').on('submit', function(e) {
+		e.preventDefault();
+	    console.log('inside the ugly submit!');
+	    console.log($('#test_form'));
+	    console.log( $('#test_form').attr('action'));
+	    $.get(
+	      $('#test_form').attr('action'),
+	      $('#test_form').serialize(), // {"q": "hello"}
+	      function(check) {
+	        $('.modal-body').html(check);
+	      },
+	      'html'
+	    );
+	    console.log('before false');
+	    return false;
+  	}); 
 });
 

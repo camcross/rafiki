@@ -22,5 +22,6 @@ class TestsController < ApplicationController
 		# if @score == @count
 		# 	current_user.points += @test.task.points
 		# end
+		# render "test/check", :layout => false
 	end
 end
