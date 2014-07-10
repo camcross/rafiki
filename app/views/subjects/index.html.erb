@@ -12,10 +12,10 @@
 		<% @courses.each do |course| %>
 			<% if course.subject_id == subject.id %>
 			<!-- The java script will not work here SOS class = "course-header" -->
-				<div id = "header">
+				<div class = "course-header" id = "header">
 					<%= course.name %>
 		    	</div>
-		    	
+		    	<div class = "wrapper_div">
 					<% @tasks.each do |task| %>
 					<div class = "information">
 						<% if task.course_id == course.id %>
@@ -28,6 +28,7 @@
 	    				<% end %>
 	    			</div>
 					<% end %>
+				</div>
 		<% end %>	
 	<% end %>
 </div>

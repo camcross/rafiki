@@ -33,4 +33,5 @@
 	def task_params
 		params.require(:task).permit(:name, :points, :enrollee_id, :author_id, :description, :course_id)
 	end	
+
 end

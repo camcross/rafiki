@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get 'enrollments/welcome' => 'enrollments#welcome'
 
-  post '/tests/check' => 'tests#check'
+  get '/tests/check' => 'tests#check'
 
   get 'teach' => 'teach#index'
 

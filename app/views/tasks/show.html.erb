@@ -1,33 +1,37 @@
-
-<div class = "surround-upper-content">
-	<h1>Enrollment Page: <%= @task.name %></h1>
-	<div class = "text_box_for_enroll">
+<h1><%= @task.name %> Challenge</h1>
+<div class = "row surround-upper-content">
+	
+	<div class = "col-md-5 text_box_for_enroll">
 		<strong><h4 class= "inside-header">Description: </h4></strong>
 		<div class = "text_body"><%= @task.description %>
 		</div>
 	</div>
-	<div class = "text_box_for_enroll">
+	<div class = "col-md-12 text_box_for_enroll">
 		<strong><h4 class= "inside-header">Read About It</h4></strong>
 		<div class = "text_body">
-			<% @task.guide.body.split(" ").each do |link|%>
-			<%= link_to link, link %>
+			<% @task.guide.body.split(" ").each_with_index do |link, i|%>
+			<%= link_to "Resource #{i+1}", link, class: "centered_links" %>
 			<br/>
 			<% end %>
 		</div>
 	</div>
-	<div class = "text_box_for_enroll">
+	<div class = "col-md-12 text_box_for_enroll">
 		<strong><h4 class= "inside-header">Practice</h4></strong>
 		<div class = "text_body">
-			<% @task.guide.practice.split(" ").each do |link|%>
-			<%= link_to link, link %>
+			<% @task.guide.practice.split(" ").each_with_index do |link, i|%>
+			<%= link_to "Practice #{i+1}", link, class: "centered_links" %>
 		<br/>
 		<% end %>
 		</div>
 	</div>
 </div>
-	<div class = "course-header">
+	<div class= "wrapper-tutor-button">
+		<%= link_to 'Connect With Tutor', mentorship_path, method: :post, class: "tutor-button" %>
+	</div>
+	<div class = "course-header" id = "buttons">
 		<a class="test-button" href="#take_test">Take Test</a>
 	</div>
+
 
 
 <div class="take_test_view" id="take_test">
@@ -35,7 +39,7 @@
 	<br/>
 	<%= @task.test.body %>
 	<br/><br/>
-	<%= form_tag "/tests/check" do %>
+	<%= form_tag "/tests/check", id: "test_form" do %>
 	<input type="hidden" name="task_id" value=<%= params[:id] %> >
 
 	<ol>
@@ -50,9 +54,32 @@
 		</div>
 		<% end %>
 	</ol>
-	<input type="submit" name="Submit" value="Submit">
+	<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="ugly-submit">
+	  Submit
+	</button>
+<!-- 	<input type="submit" name="Submit" value="Submit"> -->
 	<% end %>
 </div>
 
-<%= link_to 'HELP', mentorship_path, method: :post %>
 
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel"></h4>
+      </div>
+      <div class="modal-body">
+      	<h1>Calculating Results...</h1>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
+<!--        <%= link_to 'Profile', users_path %> -->
+      </div>
+    </div>
+  </div>
+</div>
