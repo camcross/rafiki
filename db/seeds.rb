@@ -75,9 +75,8 @@ Option.create(:question_id => 4, :body => "√32 inches")
 Option.create(:question_id => 4, :body => "√34 inches")
 Option.create(:question_id => 4, :body => "6 inches")
 
-Question.create(:test_id => 1, :body => "Hannah needs to avoid walking in a huge puddle on her way to school.
-	To move around the puddle, she walks 20 feet to the left, then 15 feet forward. Instead 
-	of moving 35 feet, how far could Hannah have walked to get to her current spot if the puddle weren't there?", 
+Question.create(:test_id => 1, :body => "To move around a puddle, Hannah walks 20 feet to the left, then 15 feet forward. Instead 
+	of moving 35 feet, how far could Hannah have walked if the puddle weren't there?", 
 	:answer => "A")
 
 Option.create(:question_id => 5, :body => "25 feet")
@@ -85,9 +84,8 @@ Option.create(:question_id => 5, :body => "23 feet")
 Option.create(:question_id => 5, :body => "27 feet")
 Option.create(:question_id => 5, :body => "26 feet")
 
-Question.create(:test_id => 1, :body => "Marie measures her rectangular birhday cake and discovers that it
-	is 18 inches wide and 24 inches wide. How long of a cut does she need to make if she wants to cut the 
-	cake diagonally?", :answer => "D")
+Question.create(:test_id => 1, :body => "Marie's mrectangular birhday cake is 18 inches wide and 24 inches wide. 
+	How long of a cut does she need to make if she wants to cut the cake diagonally?", :answer => "D")
 
 Option.create(:question_id => 6, :body => "36 inches")
 Option.create(:question_id => 6, :body => "34 inches")
