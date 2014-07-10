@@ -4,6 +4,8 @@ gem 'devise'
 
 gem 'binding_of_caller', group: :development
 
+# gem 'pry-debugger'
+
 gem 'bootstrap-sass'
 gem 'tzinfo-data'
 gem 'paperclip'

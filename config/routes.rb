@@ -16,6 +16,10 @@ Rails.application.routes.draw do
 
   post 'mentorships/:id' => 'mentorships#show'
 
+  get '/mentorships/user_video' => 'mentorships#user_video'
+
+  get '/mentorships/tutor_video' => 'mentorships#tutor_video'
+
 
   resources :subjects, :only => [:index, :new, :create, :show]
 

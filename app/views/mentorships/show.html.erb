@@ -1,8 +1,5 @@
-<h1>MENTORSHIP SHOW PAGE</h1>
+<h1>Tutor Requested For <strong><%= @enrollment.task.name %></h1></strong>
 
-<% mentorships = Mentorship.all %>
+<!-- Insert some message letting the user know how tutorships work -->
 
-<% mentorships.each do |m| %>
-<%= m.status %>
-<%= m.user.name %>
-<% end %>
+<h3>Someone will connect with you soon!</h3>

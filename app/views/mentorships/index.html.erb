@@ -1,1 +1,21 @@
-<h1>HAI</h1>
+<h1>Your Connections</h1>
+
+
+
+<% @mentorships.each_with_index do |m, i| %>
+	<strong><%= i+1 %>. <%= m.enrollment.task.name %></strong>
+	<br/>
+	<% if m.tutor == nil %>
+		<%= "Sorry, nobody has connect with you yet, stay tuned!" %>
+		<%= m.status %>
+		<% break %>
+	<% end %>
+	<% if m.user_id != current_user.id %>
+		<strong>Your Partner: <%= m.user.name %></strong>
+		<%= link_to 'View Team Page', "/mentorships/tutor_video", method: :get %>
+		<% else %>
+		<strong><%= m.tutor.name %></strong>
+		<%= link_to 'View Team Page', "/mentorships/user_video", method: :get %>
+		<% end %>
+		</br>
+<% end %>

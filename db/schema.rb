@@ -57,6 +57,9 @@ ActiveRecord::Schema.define(version: 20140708232956) do
     t.string   "practice"
   end
 
+  create_table "lessons", force: true do |t|
+  end
+
   create_table "links", force: true do |t|
     t.string  "body"
     t.integer "guide_id"
