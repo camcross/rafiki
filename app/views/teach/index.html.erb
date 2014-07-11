@@ -10,7 +10,7 @@
 						<% if m.enrollment.task.name == enrollment.task.name && m.user != current_user && 
 							m.status == "Pending"%>
 							<div class = 'task_help_for_teach'><%= "#{m.user.name} needs help!" %></div>
-							<%= link_to 'Connect', "/mentorships/#{m.id}", method: :put, :class => 'connect_for_teach_page' %>
+							<div class = 'connect_for_teach_page'><%= link_to 'Connect', "/mentorships/#{m.id}", method: :put %></div>
 						<% end %>	
 					<% end %>	
 			<% end %>

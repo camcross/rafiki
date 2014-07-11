@@ -1,9 +1,7 @@
-<h1>Team Page For <%= @mentorship.tutor.name %> AND <%= @mentorship.user.name %></h1>
-
-<%= @mentorship.status %>
-<br/>
-<%= @mentorship.user_id %>
+<h1>You've been connected with <%= @mentorship.user.name %>!</h1>
 
 
+<h1><%= link_to 'See Your Connections', mentorships_path %></h1>
 
-<h3>VIDEO FEATURE NEEDED HERE TO CONNECT TUTOR AND USER, SEE PETTER</h3>
+
+
