@@ -13,7 +13,7 @@
         var token = "T1==cGFydG5lcl9pZD00NDg5MjYzMSZzaWc9OTZjYjRjZWM0NDY5ODFiZTUyNGE2Y2ZlYTUyMGI3MTVkOGZiNjg5Zjpyb2xlPXB1Ymxpc2hlciZzZXNzaW9uX2lkPTJfTVg0ME5EZzVNall6TVg1LVYyVmtJRXAxYkNBd09TQXhORG93T1RvME55QlFSRlFnTWpBeE5INHdMakEwTWpJeE5UZzROSDUtJmNyZWF0ZV90aW1lPTE0MDQ5NDAxOTUmbm9uY2U9MC42ODg1ODE1OTU2MzMwMDg3JmV4cGlyZV90aW1lPTE0MDc1MzIxNzk=";
         var session = OT.initSession(apiKey, sessionID);
         session.on("sessionConnected", function sessionConnectHandler(event) {
-           var publisher = OT.initPublisher("publisher",{width:200, height:150});
+           var publisher = OT.initPublisher("publisher",{width:300, height:250});
             session.publish(publisher);
         });
         session.on("streamCreated", function(event) {

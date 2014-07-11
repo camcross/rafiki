@@ -11,6 +11,6 @@ class User < ActiveRecord::Base
 	#for users who will enroll in tasks
 	has_many :enrollments
 	has_many :tasks, through: :enrollments
-
+	
 	has_many :mentorships
 end
