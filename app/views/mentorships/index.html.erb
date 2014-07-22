@@ -3,14 +3,21 @@
 
 <div class = "text_box_for_teach">
 	<% @mentorships.each_with_index do |m, i| %>
-	<div class="I_hate_cameron">
-		<div class = "task_name_for_teach"><%= i+1 %>) <%= m.enrollment.task.name %></div>
-		<% if m.tutor == nil %>
-		<div class = 'link_for_teach_page'><%= "Sorry, nobody has connect with you yet, stay tuned!" %></div>
-			<% m.status %>
-			<% break %>
-		<% end %>
-		<% if m.user_id != current_user.id %>
+	<% if m.user_id == current_user.id %>
+		<div class="I_hate_cameron">
+			<div class = "task_name_for_teach"><%= i+1 %>) <%= m.enrollment.task.name %></div>
+			<!-- Handle cases with no tutor -->
+				<% if m.tutor == nil %>
+					<div class = 'link_for_teach_page'><%= "Sorry, nobody has connected with you yet, stay tuned!" %></div>
+					<% m.status %>
+					<% break %>
+				<% else %>	
+					<div class = 'link_for_teach_page'>Your Partner: <%= m.user.name %></div>
+					<div class = 'task_help_for_teach'><%= link_to 'View Team Page', "/mentorships/tutor_video", method: :get %></div>
+
+				<% end %>
+	<% end %>	
+		<% if m.tutor_id == current_user.id %>
 			<div class = 'link_for_teach_page'>Your Partner: <%= m.user.name %></div>
 			<div class = 'task_help_for_teach'><%= link_to 'View Team Page', "/mentorships/tutor_video", method: :get %></div>
 			<% else %>
